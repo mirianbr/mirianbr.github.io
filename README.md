@@ -6,6 +6,14 @@ Currently looking for contributing to amazing projects and companies using Data 
 
 ### Recent posts
 
+<ul>
+  {% for post in site.posts limit 5 %}
+    <li>
+      {{ post.date | date: "%d/%mm/%Y"}} - <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
 [All posts](posts.html)
 
 ### Contact
