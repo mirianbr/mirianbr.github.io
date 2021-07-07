@@ -4,6 +4,10 @@ IT professional with proven experience in the industry, public sector and resear
 
 Currently looking for contributing to amazing projects and companies using Data Analytics and Natural Language Processing tools.
 
+### Recent posts
+
+[All posts](posts.html)
+
 ### Contact
 
 * São Leopoldo, Brazil
