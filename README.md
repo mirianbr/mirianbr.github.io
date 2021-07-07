@@ -9,7 +9,7 @@ Currently looking for contributing to amazing projects and companies using Data 
 <ul>
   {% for post in site.posts limit 5 %}
     <li>
-      {{ post.date | date: "%d/%mm/%Y"}} - <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.date | date_to_long_string }} - <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
