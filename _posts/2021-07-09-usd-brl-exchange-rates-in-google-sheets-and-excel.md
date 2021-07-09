@@ -36,3 +36,26 @@ We have done all this just to find the date. Now we need the exchange rate for i
 Therefore we need to use the official sources. Fine. To find the rates, here I used [IMPORTDATA](https://support.google.com/docs/answer/3093335) and [QUERY](https://support.google.com/docs/answer/3093343) with the CSV provided by the Bank. At the time I created the first version of these documents, I couldn't find any API to retrieve this data (now [there is](https://dadosabertos.bcb.gov.br/dataset/dolar-americano-usd-todos-os-boletins-diarios/resource/ae69aa94-4194-45a6-8bae-12904af7e176), looking forward to using it shortly!).
 
 Here you can see the [resulting Google sheets document](https://docs.google.com/spreadsheets/d/1GNjj3T8Xui7oRoQkrKOgb3Jx-1ptR16IjtY-gX_73gg/edit#gid=0) ([pt-BR version](https://docs.google.com/spreadsheets/d/1ijILRdL32EJjuhzPYAs3rjAdj83viPhWnZO5BG2Wu_Y/edit?usp=sharing)).
+
+## Microsoft Excel
+
+In Excel, the same steps apply - and some of the functions even have the same name!
+
+Have the payment date entered, and let's follow together the steps to get the date for the exchange rate:
+
+1. Find the payment month, using a creative [EOMONTH](https://support.microsoft.com/en-us/office/eomonth-function-7314ffa1-2bc9-4005-9d66-f49db127d628)
+2. Find the month prior to the payment month, also with `EOMONTH`
+3. Find the first fortnight of the month prior to the payment month, only by adding 15 days to the date in the previous step
+4. Find the last business day of the first fortnight of the month prior to the payment month, using [WEEKDAY](https://support.microsoft.com/en-us/office/weekday-function-60e44483-2ed1-439f-8bd0-e404c190949a) with the second parameter as `2`, starting weeks with Monday and thus having Saturday and Sunday easy to spot with an `IF` clause
+
+In Excel too I haven't considered holidays. Beware of Carnival, November 15th ([Republic Day in Brazil](https://en.wikipedia.org/wiki/Proclamation_of_the_Republic_(Brazil))) and so many others I may be forgetting.
+
+![Warning sign in red](https://media.giphy.com/media/Y5wlazC8lSVuU/giphy.gif)
+
+The dates above can be used to forge an URL to extract CSV data from, that will look like something this: https://ptax.bcb.gov.br/ptax_internet/consultaBoletim.do?method=gerarCSVFechamentoMoedaNoPeriodo&ChkMoeda=61&DATAINI=14/04/2021&DATAFIM=15/04/2021. `DATAINI` means start date, and `DATAFIM` end date.
+
+Now, to import the exchange rates from CSV. Here comes the main difference between Google sheets and Excel. Google sheets provide a very nice `IMPORTDATA` function that works directly in the sheet, while Excel has no such thing. There's all the data importing, scrapping and processing tools that come together with Power Query, so I had to use the UI a bit.
+
+![Mr. Krabs agreeing to something. He looks happy.](https://media.giphy.com/media/l0EtMMARnUBHCzZ3G/giphy.gif)
+
+I find this the easiest way to create the connection: import the CSV using the **Data** tab in Excel, and then change the connection to be a function. You can process the origin CSV manually to remove all columns except the one for the exchange rate, and have only the last row to be shown, or use the function I have created:
