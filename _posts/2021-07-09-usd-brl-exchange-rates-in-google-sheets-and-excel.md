@@ -60,7 +60,7 @@ Now, to import the exchange rates from CSV. Here comes the main difference betwe
 
 I find this the easiest way to create the connection: import the CSV using the **Data** tab in Excel, and then change the connection to be a function. You can process the origin CSV manually to remove all columns except the one for the exchange rate, and have only the last row to be shown, or use the function I have created:
 
-```
+<code>
 = (URL) as table =>
 
 let
@@ -77,7 +77,7 @@ let
     #"Renamed Columns" = Table.RenameColumns(#"Kept First Rows",{{"Column5", "1 USD em BRL"}})
 in
     #"Changed Type"
-```
+</code>
   
 There's a `URL` parameter the function will take into account. You can invoke the function directly, provide the URL and get the rate, or you can create a table and invoke the custom function (as I did).
 
