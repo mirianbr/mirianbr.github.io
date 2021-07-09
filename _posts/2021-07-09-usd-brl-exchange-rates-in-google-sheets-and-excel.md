@@ -59,3 +59,18 @@ Now, to import the exchange rates from CSV. Here comes the main difference betwe
 ![Mr. Krabs agreeing to something. He looks happy.](https://media.giphy.com/media/l0EtMMARnUBHCzZ3G/giphy.gif)
 
 I find this the easiest way to create the connection: import the CSV using the **Data** tab in Excel, and then change the connection to be a function. You can process the origin CSV manually to remove all columns except the one for the exchange rate, and have only the last row to be shown, or use the function I have created:
+
+```
+= (URL) as table =>
+
+let
+Source = Csv.Document(Web.Contents(URL),[Delimiter=";", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+#"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", Int64.Type}, {"Column2", Int64.Type}, {"Column3", type text}, {"Column4", type text}, {"Column5", type number}, {"Column6", type number}, {"Column7", Int64.Type}, {"Column8", Int64.Type}}),
+#"Sorted Rows" = Table.Sort(Source,{{"Column1", Order.Descending}}),
+#"Removed Columns" = Table.RemoveColumns(#"Sorted Rows",{"Column1", "Column2", "Column3", "Column4", "Column6", "Column7", "Column8"}),> 
+#"Kept First Rows" = Table.FirstN(#"Removed Columns",1),
+#"Renamed Columns" = Table.RenameColumns(#"Kept First Rows",{{"Column5", "1 USD em BRL"}})
+in
+#"Changed Type"
+```
+  
