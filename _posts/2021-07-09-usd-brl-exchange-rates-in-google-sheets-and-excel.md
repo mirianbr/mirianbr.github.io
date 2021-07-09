@@ -64,13 +64,25 @@ I find this the easiest way to create the connection: import the CSV using the *
 = (URL) as table =>
 
 let
-Source = Csv.Document(Web.Contents(URL),[Delimiter=";", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
-#"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", Int64.Type}, {"Column2", Int64.Type}, {"Column3", type text}, {"Column4", type text}, {"Column5", type number}, {"Column6", type number}, {"Column7", Int64.Type}, {"Column8", Int64.Type}}),
-#"Sorted Rows" = Table.Sort(Source,{{"Column1", Order.Descending}}),
-#"Removed Columns" = Table.RemoveColumns(#"Sorted Rows",{"Column1", "Column2", "Column3", "Column4", "Column6", "Column7", "Column8"}),> 
-#"Kept First Rows" = Table.FirstN(#"Removed Columns",1),
-#"Renamed Columns" = Table.RenameColumns(#"Kept First Rows",{{"Column5", "1 USD em BRL"}})
+    Source = Csv.Document(Web.Contents(URL),[Delimiter=";", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", Int64.Type}, {"Column2", Int64.Type}, 
+      {"Column3", type text}, 
+      {"Column4", type text}, 
+      {"Column5", type number}, 
+      {"Column6", type number}, 
+      {"Column7", Int64.Type}, {"Column8", Int64.Type}}),
+    #"Sorted Rows" = Table.Sort(Source,{{"Column1", Order.Descending}}),
+    #"Removed Columns" = Table.RemoveColumns(#"Sorted Rows",{"Column1", "Column2", "Column3", "Column4", "Column6", "Column7", "Column8"}),> 
+    #"Kept First Rows" = Table.FirstN(#"Removed Columns",1),
+    #"Renamed Columns" = Table.RenameColumns(#"Kept First Rows",{{"Column5", "1 USD em BRL"}})
 in
-#"Changed Type"
+    #"Changed Type"
 ```
   
+There's a `URL` parameter the function will take into account. You can invoke the function directly, provide the URL and get the rate, or you can create a table and invoke the custom function (as I did).
+
+Here's the [resulting Excel sheet](https://github.com/mirianbr/exchange-rates/blob/main/Exchange_rates-PQ-en.xlsx) ([pt-BR version](https://github.com/mirianbr/exchange-rates/blob/main/Exchange_rates-PQ-ptBR.xlsx)). You can download, use, change and improve it freely. 
+
+I'm sure there are so many ways to do this better, and I'd love to hear any comments or suggestions you may have - please see [my contacts](https://mirianbr.github.io/) and let's chat!
+
+![Cute little kittens using headsets and telephones](https://media.giphy.com/media/WhwzCRKKs1yDe/giphy.gif)
