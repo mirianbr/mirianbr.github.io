@@ -37,7 +37,9 @@ TesseractError: (1, 'Error opening data file <your tessdata dir>/por.traineddata
   Could not initialize tesseract.')
 ```
 
-The `couldn't load any languages` part led me to find the same answers as the previous section -- forcing the tessdata-dir configuration. Except it didn't happen for English. The relevant part of the error message was the `language 'por'`. tesseract didn't have Portuguese data. Understanding the error was much harder than the resolution:
+The `couldn't load any languages` part led me to find the same answers as the previous section -- forcing the tessdata-dir configuration. Except it didn't happen for English. 
+
+The relevant part of the error message was the `language 'por'`: tesseract didn't have Portuguese data. Understanding the error was much harder than the resolution:
 
 1. Download your language data from the [tesseract repository](https://github.com/tesseract-ocr/tessdata/)
 2. Save it in your tessdata directory
