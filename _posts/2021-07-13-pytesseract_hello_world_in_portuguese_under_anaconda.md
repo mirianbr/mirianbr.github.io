@@ -44,6 +44,6 @@ The relevant part of the error message was the `language 'por'`: tesseract didn'
 1. Download your language data from the [tesseract repository](https://github.com/tesseract-ocr/tessdata/)
 2. Save it in your tessdata directory
 
-All done!
+All done! 
 
-You can see also [my Jupyter Notebook for this tutorial](https://github.com/mirianbr/vaccine-batches/blob/main/hello-ocr.ipynb).
+Having the config and data set up, OCR with tesseract in Portuguese worked great. See how in [my Jupyter Notebook for this tutorial](https://github.com/mirianbr/vaccine-batches/blob/main/hello-ocr.ipynb). 😉
