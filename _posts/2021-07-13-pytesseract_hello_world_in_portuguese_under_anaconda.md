@@ -25,7 +25,9 @@ phrase = ocr.image_to_string(Image.open('oi.jpeg'), config=tessdata_dir_config)
 
 ## Failed loading language 'por', Tesseract couldn't load any languages!
 
-If you want to use tesseract to read texts from images that are not in English (in my case, it's Portuguese), have in mind Anaconda may not have installed your target language. In my case, my English tutorials worked, but not other languages ([announced to be supported](https://github.com/tesseract-ocr/tesseract/blob/master/doc/tesseract.1.asc#languages)). Every time, I got the error below:
+If you want to use tesseract to read texts from images that are not in English (in my case, it's Portuguese), have in mind Anaconda may not have installed your target language. 
+
+My English tutorials worked, but not other languages ([announced to be supported](https://github.com/tesseract-ocr/tesseract/blob/master/doc/tesseract.1.asc#languages)). Every time, I got the error below:
 
 ```
 TesseractError: (1, 'Error opening data file <your tessdata dir>/por.traineddata 
