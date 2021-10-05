@@ -10,7 +10,7 @@ This weekend I participated for the very first time in the [Ludum Dare game jam]
 
 ![I did it!](https://media.giphy.com/media/l4EpblDY4msVtKAOk/giphy.gif)
 
-Until a few days ago, I didn't know anything about interactive fiction. My husband told me I would like it when I said I was looking for enrolling in Ludum Dare this time, maybe with something low code, to do some educational game or something. He didn't have any experience with the tools themselves, but listed to me [Twine](twinery.org/), [Ren'Py](https://www.renpy.org/), [Inform](http://inform7.com/) and a few others that people use to create visual novels and/or interactive fiction. 
+Until a few days ago, I didn't know anything about interactive fiction. My husband told me I would like it when I said I was looking for enrolling in Ludum Dare this time, maybe with something low code, to do some educational game or something. He didn't have any experience with the tools themselves, but listed to me [Twine](https://twinery.org/), [Ren'Py](https://www.renpy.org/), [Inform](http://inform7.com/) and a few others that people use to create visual novels and/or interactive fiction. 
 
 After playing with Twine and Ren'Py for a few minutes to an hour, I decided to go for Twine this time. I used [Twine](twinery.org/) and [Sugarcube 2](https://www.motoslave.net/sugarcube/2/docs/), with some CSS tweaks -- but it's mostly Sugarcube macros only. This library is so powerful -- and fun to create with!
 
@@ -22,7 +22,7 @@ When the [jam theme came out on Friday evening](https://ldjam.com/events/ludum-d
 
 At the end of the first complete day I had a (boring) playable version; at the end of Sunday I had a better one (with graphics and some audio); and finally some hours from the deadline on Monday I had a version I was happy to share -- and a lot of other ideas documented (more like "Future works" than TODOs, actually), of course.
 
-![See here!](https://media.giphy.com/media/YmziWgZnWVBTTTJobg/giphy.gif)
+![See here!](httpshttps://media.giphy.com/media/Rdod7XvXQjzCVpiDnR/giphy.gif)
 
 There is no chance you'll enjoy playing my piece as much as I enjoyed doing it, but here it is anyway: you can [play it online on itch.io](https://mirianbr.itch.io/asylum).
 
