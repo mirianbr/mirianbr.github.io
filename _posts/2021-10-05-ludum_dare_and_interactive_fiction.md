@@ -28,7 +28,7 @@ There is no chance you'll enjoy playing my piece as much as I enjoyed doing it, 
 
 And this is [my game page in LD game jam](https://ldjam.com/events/ludum-dare/49/asylum).
 
-![A screenshot of Asylum, my interactive fiction piece for Ludum Dare 49.](https://github.com/mirianbr/asylum/blob/main/screenshots/ld-screenshot.png)
+![A screenshot of Asylum, my interactive fiction piece for Ludum Dare 49.](https://raw.githubusercontent.com/mirianbr/asylum/main/screenshots/ld-screenshot.png)
 
 Drop me a note if you liked my story (or if you didn't, but played it anyway). I'd love to hear what you think!
 
