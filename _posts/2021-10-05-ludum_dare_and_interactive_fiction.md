@@ -22,7 +22,7 @@ When the [jam theme came out on Friday evening](https://ldjam.com/events/ludum-d
 
 At the end of the first complete day I had a (boring) playable version; at the end of Sunday I had a better one (with graphics and some audio); and finally some hours from the deadline on Monday I had a version I was happy to share -- and a lot of other ideas documented (more like "Future works" than TODOs, actually), of course.
 
-![See here!](https://media.giphy.com/media/Rdod7XvXQjzCVpiDnR/giphy.gif)
+## Play it!
 
 There is no chance you'll enjoy playing my piece as much as I enjoyed doing it, but here it is anyway: you can [play it online on itch.io](https://mirianbr.itch.io/asylum).
 
@@ -31,6 +31,8 @@ And this is [my game page in LD game jam](https://ldjam.com/events/ludum-dare/49
 ![A screenshot of Asylum, my interactive fiction piece for Ludum Dare 49.](https://github.com/mirianbr/asylum/blob/main/screenshots/ld-screenshot.png)
 
 Drop me a note if you liked my story (or if you didn't, but played it anyway). I'd love to hear what you think!
+
+## Download and play with it!
 
 The HTML (and associated media) is on [github](https://github.com/mirianbr/asylum), and you can just download it and open in Twine. (Twine is so great, did I say this already?)
 
