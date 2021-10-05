@@ -22,7 +22,7 @@ When the [jam theme came out on Friday evening](https://ldjam.com/events/ludum-d
 
 At the end of the first complete day I had a (boring) playable version; at the end of Sunday I had a better one (with graphics and some audio); and finally some hours from the deadline on Monday I had a version I was happy to share -- and a lot of other ideas documented (more like "Future works" than TODOs, actually), of course.
 
-![See here!](httpshttps://media.giphy.com/media/Rdod7XvXQjzCVpiDnR/giphy.gif)
+![See here!](https://media.giphy.com/media/Rdod7XvXQjzCVpiDnR/giphy.gif)
 
 There is no chance you'll enjoy playing my piece as much as I enjoyed doing it, but here it is anyway: you can [play it online on itch.io](https://mirianbr.itch.io/asylum).
 
